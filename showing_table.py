@@ -19,11 +19,11 @@ dba = pd.read_excel("DBA.xlsx")
 
 so = ColumnDataSource(dba)
 columns = [
-        TableColumn(field="Session ID (S)", title="Session ID"),
-        TableColumn(field="Application server host name", title="server"),
+        TableColumn(field="Work Process ID", title="wp"),
+        TableColumn(field="Blocking Session ID", title="blocking id"),
         TableColumn(field="CPU", title="CPU time in ms"),
-        TableColumn(field="MS SQL Server object name", title="object name"),
-        TableColumn(field="SQL Statement", title="SQL Statement")
+        TableColumn(field="Process ID (S)", title="Process ID (S)")
+      
     ]
 
 data_table = DataTable(source=so, columns=columns, width=1100, height=700)
